@@ -11,13 +11,33 @@ Le but est de montrer que calculer la couverture de code sur un programme exécu
 
 Pour atteindre notre objectif, nous avons utiliser une librairie permettant de faire de la transformation de code source. L’idée est que le programme transformé puisse d’auto-instrumenter afin de notifier l’utilisateur de sa couverture à n'importe quel moment de son exécution.
 
+
 # Usage
 
+## CLI
     CocoSpoon
        -i, --input-path     input project folder
        -o, --output-path    instrumented project destination
       [-c, --classpath      classpath] 
 
+## Maven
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>fil.iagl.cocospoon</groupId>
+        <artifactId>CocoSpoon</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+</dependencies>
+<repositories>
+    <repository>
+        <id>tdurieux.github.io/maven-repository/snapshots/</id>
+        <name>tdurieux.github.io maven-repository</name>
+        <url>https://tdurieux.github.io/maven-repository/snapshots/</url>
+    </repository>
+</repositories>
+```
 # GUI
 
 The GUI is availaible on <https://github.com/SpoonLabs/CoCoSpoon-ui>
